@@ -17,6 +17,23 @@ caperucita[24]={
     51,352
 };
 
+casa[26]={
+    449,0,
+    414,73,
+    421,84,
+    492,84,
+    491,407,
+    640,464,
+    640,65,
+    495,65,
+    540,0,
+    466,0,
+    495,65,
+    493,91,
+    504,97,
+    640,100
+}
+
 void fondo(void);
 
 
@@ -29,6 +46,7 @@ void main(){
     initgraph(&driver, &modo, "");
 
     fondo();
+    drawpoly(13,casa);
     while(kbhit()==0){
         setfillstyle(SOLID_FILL,WHITE);
         bar(100+x,20,150+x,40);
