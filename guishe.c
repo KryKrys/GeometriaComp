@@ -4,8 +4,8 @@
 
 
 int suelo[10]={0, 380, 640, 380, 640, 480, 0, 480, 0, 380};
-
-
+int cuerpe[18]={171, 450, 171, 400, 129, 400, 200, 300, 271, 400, 232, 400, 232, 450, 232, 400, 170, 400};
+int cabeza[8]={215, 300, 175, 300, 201, 250, 215, 300};    
 
 
 void main(){
@@ -14,24 +14,11 @@ void main(){
 
     initgraph(&driver, &modo, "C:\\TC20\\BIN");
 
+    drawpoly(9, cuerpe);
+	 /*( arc( 210, 277, 260, 110, 20 );*/
+    circle(210, 277, 20);
+    drawpoly(4, cabeza);
 
-	  setfillstyle(SOLID_FILL, GREEN);
-    fillpoly(5, suelo);
-
-    
-    line(170,    
-    line(200, 250, 170, 300); 
-    line(170, 300, 230, 300);
-
-    /*CUERPE*/
-    line(200, 300, 130, 400);
-    line(200, 300, 270, 400);
-    line(130, 400, 270, 400);
-
-
-    /*PATAS*/
-    line(170, 400, 170, 450);
-    line(230, 400, 230, 450); 
 
     getch();
 }
