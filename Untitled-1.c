@@ -17,27 +17,28 @@ void main(){
 
     mver();
 
-    while(cont <= 9){
+    while(cont < MAX){
 
         while(mclick()!=1){
 		    mposx=mxpos(1);
 		    mposy=mypos(1);
 
             delay(100);
-            
+
             if(mclick()==1)
                 cont++;
 
 	    }
-
         
+        mocultar();
 
         setcolor(RED);
         circle(mposx,mposy,2);
         setfillstyle(SOLID_FILL,RED);
         floodfill(mposx,mposy,RED);
+
         mver();
-        printf("%i  ",cont);
+        
     }
 
     mocultar();
