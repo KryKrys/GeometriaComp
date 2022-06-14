@@ -47,6 +47,7 @@ puerta[22]={
 
 
 void fondo(void);
+void casita(void);
 
 
 
@@ -58,23 +59,26 @@ void main(){
     initgraph(&driver, &modo, "");
 
     fondo();
-    
+    setcolor(DARKGRAY);
+    line(0,350,640,350);
     while(kbhit()==0){
+        setcolor(DARKGRAY);
         setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(0,0,640,350);
-        
+        floodfill(30,310,DARKGRAY);
+    
         setfillstyle(SOLID_FILL,WHITE);
-        bar(100+x,20,150+x,40);
-        bar(10+x,120,60+x,140);
-        bar(200+x,80,250+x,100);
-        
+        rectangle(100+x,20,150+x,40);
+        rectangle(10+x,120,60+x,140);
+        rectangle(200+x,80,250+x,100);
+
+        floodfill(110+x,25,DARKGRAY);
+        floodfill(15+x,125,DARKGRAY);
+        floodfill(210+x,85,DARKGRAY);
+
+        setcolor(WHITE);
         circle(0,0,70);
         setfillstyle(SOLID_FILL,YELLOW);
         floodfill(0,0,WHITE);
-
-        
-
-        
 
         if(x<640){
             x+=10;
@@ -82,10 +86,9 @@ void main(){
             x=10;
         
         }
-        
-        drawpoly(11,casa);
-        drawpoly(11,puerta);
+        casita();
         delay(300);
+
 
         
     }
@@ -97,4 +100,14 @@ void fondo(){
     bar(0,0,640,480);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
     bar(0,350,640,480);
-}
+}
+
+void casita(){
+    
+    setcolor(DARKGRAY);
+    drawpoly(11,casa);
+    setfillstyle(SOLID_FILL,LIGHTGRAY);
+        
+    drawpoly(11,puerta);
+    setcolor(WHITE);
+}
