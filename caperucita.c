@@ -92,7 +92,7 @@ void main(){
         cap(-10);
         
         setcolor(LIGHTGREEN);
-        cap(20);
+        cap(10);
         
 
         if(x>640){
@@ -100,8 +100,6 @@ void main(){
         }
 
         x+=10;
-
-        
 
         delay(1000);
 
