@@ -67,7 +67,7 @@ void cap(int x);
 void main(){
 
 	int modo, driver = DETECT;
-    int x=10, c=10;
+    int x=10;
 
     initgraph(&driver, &modo, "");
 
@@ -76,9 +76,6 @@ void main(){
         
         setfillstyle(SOLID_FILL,LIGHTBLUE);
         bar(0,0,640,349);
-        
-        setfillstyle(SOLID_FILL,LIGHTGREEN);
-        floodfill(10,360,DARKGRAY);
     
         setfillstyle(SOLID_FILL,WHITE);
         bar(100+x,20,150+x,40);
@@ -91,16 +88,16 @@ void main(){
         floodfill(0,0,WHITE);
         casita();
 
-        c=-10;
         setcolor(LIGHTGREEN);
-        cap(c);
-        c+=10;
-        setcolor(DARKGRAY);
-        cap(c);
+        cap(20);
+
+        setcolor(RED);
+        cap(-10);
+        
+        
 
         if(x>640){
             x=0;
-            c=0;
         }
 
         x+=10;
@@ -119,7 +116,7 @@ void fondo(){
     bar(0,0,640,480);
     setcolor(DARKGRAY);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
-    rectangle(1,350,639,479);
+    rectangle(0,350,640,480);
     floodfill(10,360,DARKGRAY);
 }
 
