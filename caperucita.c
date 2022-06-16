@@ -73,7 +73,7 @@ void main(){
 
     fondo();
     while(kbhit()==0){
-
+        
         setfillstyle(SOLID_FILL,LIGHTBLUE);
         bar(0,0,640,349);
         
@@ -91,6 +91,10 @@ void main(){
         floodfill(0,0,WHITE);
         casita();
 
+        c=-10;
+        setcolor(LIGHTGREEN);
+        cap(c);
+        c+=10;
         setcolor(DARKGRAY);
         cap(c);
 
@@ -101,11 +105,7 @@ void main(){
 
         x+=10;
 
-        c-=10;
-        setcolor(LIGHTGREEN);
-        cap(c);
-        setcolor(DARKGRAY);
-        c+=10;
+        
 
         delay(1000);
 
