@@ -88,12 +88,11 @@ void main(){
         floodfill(0,0,WHITE);
         casita();
 
-        setcolor(LIGHTGREEN);
-        cap(20);
-
         setcolor(RED);
         cap(-10);
         
+        setcolor(LIGHTGREEN);
+        cap(20);
         
 
         if(x>640){
