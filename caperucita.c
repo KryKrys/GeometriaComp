@@ -67,7 +67,7 @@ void cap(int x);
 void main(){
 
 	int modo, driver = DETECT;
-    int x=0;
+    int x=10, c=10;
 
     initgraph(&driver, &modo, "");
 
@@ -92,13 +92,20 @@ void main(){
         casita();
 
         setcolor(DARKGRAY);
-        cap(x);
+        cap(c);
 
         if(x>640){
-            x=10;
+            x=0;
+            c=0;
         }
 
         x+=10;
+
+        c-=10;
+        setcolor(LIGHTGREEN);
+        cap(c);
+        setcolor(DARKGRAY);
+        c+=10;
 
         delay(1000);
 
@@ -126,13 +133,12 @@ void casita(){
     setcolor(WHITE);
 }
 
-void cap(int x){
-    int i,aux;
+void cap(int c){
+    int i;
     drawpoly(24,caperucita);
     
     for(i = 0 ; i < 48 ; i+=2 ){
-    
-        caperucita[i] = caperucita[i] + x;
+        caperucita[i] = caperucita[i] + c;
     }
 
 }
