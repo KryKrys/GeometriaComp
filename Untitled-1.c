@@ -18,11 +18,13 @@ void main(){
     int modo, driver = DETECT;
     int mposx, mposy;
     int cont = 0;
-    struct punto p;
-    struct punto punto[MAX];
-    int maxX= 0, minX = 640;
-    int maxY = 0, minY = 480;
-    
+    struct punto p; 
+    int puntox[MAX], puntoy[MAX]; /*arreglos donde guardamos los valores de x y y */
+    int maxX= 0, minX = 640;    /* variables para comparacion de maximo y minimo de x*/
+    int maxY = 0, minY = 480;   /* variables para comparacion de maximo y minimo de y*/
+    int a,b;    /*puntos de y de max en x*/
+    int c,d;    /*puntos de x de max en y*/
+    int convexHull[MAX][2];
 
     initgraph(&driver, &modo, "");
 
@@ -40,24 +42,37 @@ void main(){
 
             delay(10);
 
-            if(mclick()==1)
+            if(mclick()==1) /*contamos cuantos clicks ha dado*/
                 cont++;
 	    }
 
         p.x = mposx;
-        p.y = mposy;
+        p.y = mposy;    /*guardamos dentro de las estructuras de puntos*/
 
-        if(p.x > maxX)
+        puntox[cont] = p.x; 
+        puntoy[cont] = p.y;
+
+        /*validamos el minimo y el maximo de x y */
+        if(p.x > maxX){
+            
             maxX = p.x;
-        else if (p.x < minX)
-            minX = p.x;
+            a = p.y;
+            printf("max %d %d \n", maxX, a);
+        }
 
-        if(p.y > maxY)
+        if (p.x < minX){
+            minX = puntox[cont];
+            b = puntoy[cont];
+            printf("min %d %d \n", minX, b);
+        }
+
+       if(p.y > maxY){
             maxY = p.y;
-        else if (p.y < minY)
+            c = p.x;
+       }else if (p.y < minY){
             minY = p.y;
-
-
+            d = p.x;
+       }
 
         mocultar();
         
@@ -70,9 +85,8 @@ void main(){
         
     }
 
-    line(maxX,maxY,minX,minY);
-    printf("%d, %d" ,maxX, minX);
-    printf("%d %d ", maxY, minY);
+    line(maxX,a,minX,b);
+    /*line(maxX,a,c,maxY);*/
 
 
     mocultar();
