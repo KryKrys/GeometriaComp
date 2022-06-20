@@ -315,8 +315,6 @@ void cap(int c){
 
     
     for(i = 0 ; i < 48 ; i+=2 ){
-        cuerpe[i] = cuerpe[i] + c;
-        cabeza[i] = cabeza[i] + c;
         weed[i] = weed[i] + c;
     }
 
