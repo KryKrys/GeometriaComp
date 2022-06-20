@@ -2,7 +2,7 @@
 #include <graphics.h>
 #include <conio.h>
 #include <dos.h>
-weed[246]={ 
+weed[246]={
     84, 381,
     83, 385,
     87, 388,
@@ -256,7 +256,7 @@ void main(){
     while(kbhit()==0){
         
         setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(0,0,640,349);
+        bar(0,0,640,310);
     
         setfillstyle(SOLID_FILL,WHITE);
         bar(100+x,20,150+x,40);
@@ -269,11 +269,13 @@ void main(){
         floodfill(0,0,WHITE);
         casita();
 
-        setcolor(RED);
-        cap(-10);
-        
         setcolor(LIGHTGREEN);
+        cap(-10);
+
+        setcolor(RED);
         cap(20);
+        
+        
         
 
         if(x>640){
@@ -294,7 +296,7 @@ void fondo(){
     bar(0,0,640,480);
     setcolor(DARKGRAY);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
-    rectangle(0,350,640,480);
+    rectangle(0,330,640,480);
     floodfill(10,360,DARKGRAY);
 }
 
@@ -313,8 +315,7 @@ void cap(int c){
 
     drawpoly(123, weed);
 
-    
-    for(i = 0 ; i < 48 ; i+=2 ){
+    for(i = 0 ; i < 246 ; i+=2 ){
         weed[i] = weed[i] + c;
     }
 
