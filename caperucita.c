@@ -250,7 +250,7 @@ void cap(int x);
 void main(){
 
 	int modo, driver = DETECT;
-									int x=10, i, c=0;
+	int x=10, i, c=0;
 
     initgraph(&driver, &modo, "");
 
@@ -280,7 +280,6 @@ void main(){
 
         setcolor(RED);
         cap(20);
-        
 
         if(x>640){
             x=0;
@@ -292,6 +291,8 @@ void main(){
         delay(1000);
 
     }
+
+    
 
 }
 
@@ -316,8 +317,6 @@ void casita(){
 
 void cap(int c){
     int i;
-
-    
 
     drawpoly(123, temp);
 
