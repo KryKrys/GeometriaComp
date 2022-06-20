@@ -8,7 +8,6 @@ void princip(void);
 void main(){
 
     int modo, driver = DETECT;
-
    
 
     initgraph(&driver, &modo, "");
@@ -16,6 +15,8 @@ void main(){
     cleardevice();
     
     princip();
+    
+
 
     getch();
 
@@ -41,4 +42,5 @@ void princip(){
     setfillstyle(SOLID_FILL,BROWN);
     bar(160,410,480,430);
     bar(310,269,330,319);
+
 }
