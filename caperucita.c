@@ -2,6 +2,7 @@
 #include <graphics.h>
 #include <conio.h>
 #include <dos.h>
+
 weed[246]={
     84, 381,
     83, 385,
@@ -239,7 +240,6 @@ canasta[166]={
     156,431
 };
 
-
 void fondo(void);
 void casita(void);
 void cap(int x);
@@ -270,11 +270,10 @@ void main(){
         casita();
 
         setcolor(LIGHTGREEN);
-        cap(-10);
+        cap(10);
 
         setcolor(RED);
         cap(20);
-        
 
         if(x>640){
             x=0;
@@ -283,7 +282,6 @@ void main(){
         x+=10;
 
         delay(1000);
-
 
     }
 
@@ -313,7 +311,7 @@ void cap(int c){
 
     drawpoly(123, weed);
 
-    for(i = 0 ; i < 246 ; i+=2 ){
+    for(i = 0 ; i < 246 ; i += 2 ){
         weed[i] = weed[i] + c;
     }
 
