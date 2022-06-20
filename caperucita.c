@@ -2,13 +2,6 @@
 #include <graphics.h>
 #include <conio.h>
 #include <dos.h>
-cuerpe[24]={187, 450, 175, 450, 175, 400, 150, 400, 200, 300, 254, 400, 232, 400, 232, 450, 248, 450, 232, 450, 232, 400, 151, 400};
-cabeza[8]={
-    215, 300, 
-    175, 300, 
-    201, 250, 
-    215, 300
-    }; 
 weed[246]={ 
     84, 381,
     83, 385,
@@ -317,8 +310,7 @@ void casita(){
 
 void cap(int c){
     int i;
-   drawpoly(12, cuerpe);
-   drawpoly(4, cabeza);
+
     drawpoly(123, weed);
 
     
