@@ -275,8 +275,6 @@ void main(){
         setcolor(RED);
         cap(20);
         
-        
-        
 
         if(x>640){
             x=0;
