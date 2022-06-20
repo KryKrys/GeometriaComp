@@ -240,6 +240,8 @@ canasta[166]={
     156,431
 };
 
+int temp[243];
+
 void fondo(void);
 void casita(void);
 void cap(int x);
@@ -248,9 +250,13 @@ void cap(int x);
 void main(){
 
 	int modo, driver = DETECT;
-    int x=10;
+									int x=10, i, c=0;
 
     initgraph(&driver, &modo, "");
+
+    for( i = 0 ; i < 246 ; i++){
+        temp[i] = weed[i];
+    }
 
     fondo();
     while(kbhit()==0){
@@ -269,17 +275,19 @@ void main(){
         floodfill(0,0,WHITE);
         casita();
 
-        setcolor(LIGHTGREEN);
-        cap(10);
+        setfillstyle(SOLID_FILL,LIGHTGREEN);
+        bar(10+c,337,109+c,472);
 
         setcolor(RED);
         cap(20);
+        
 
         if(x>640){
             x=0;
         }
 
         x+=10;
+        c+=20;
 
         delay(1000);
 
@@ -292,8 +300,8 @@ void fondo(){
     bar(0,0,640,480);
     setcolor(DARKGRAY);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
-    rectangle(0,330,640,480);
-    floodfill(10,360,DARKGRAY);
+    bar(0,330,640,480);
+    
 }
 
 void casita(){
@@ -309,10 +317,12 @@ void casita(){
 void cap(int c){
     int i;
 
-    drawpoly(123, weed);
+    
+
+    drawpoly(123, temp);
 
     for(i = 0 ; i < 246 ; i += 2 ){
-        weed[i] = weed[i] + c;
+        temp[i] = temp[i] + c;
     }
 
-}
+}
