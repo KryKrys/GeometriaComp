@@ -269,10 +269,10 @@ void main(){
         setfillstyle(SOLID_FILL,YELLOW);
         floodfill(0,0,WHITE);
 
-        /*setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(100+x,20,150+x,40);
-        bar(10+x,120,60+x,140);
-        bar(200+x,80,250+x,100);*/
+        setfillstyle(SOLID_FILL,LIGHTBLUE);
+        bar(90+x,20,140+x,40);
+        bar(0+x,120,50+x,140);
+        bar(190+x,80,240+x,100);
 
         casita(x);
 
