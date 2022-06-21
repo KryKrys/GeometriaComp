@@ -254,29 +254,16 @@ void main(){
 
     initgraph(&driver, &modo, "");
 
+    /*pasamos los valores de el arreglo a uno temporal para moverlo*/
     for( i = 0 ; i < 246 ; i++){
         temp[i] = weed[i];
     }
 
     fondo();
-    while(kbhit()==0){
-        
-        /*setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(0,0,640,310);*/
-
-        setcolor(WHITE);
-        circle(0,0,70);
-        setfillstyle(SOLID_FILL,YELLOW);
-        floodfill(0,0,WHITE);
-
-        
+    while(kbhit()==0){/*ciclo hasta q se presione una tecla*/
 
         casita(x);
-
-        setfillstyle(SOLID_FILL,LIGHTGREEN);
-        bar(10+c,337,109+c,472);
-
-        setcolor(RED);
+       
         cap(20);
 
         if(x>640){
@@ -295,17 +282,24 @@ void main(){
 }
 
 void fondo(){
+    /*barra del cielo y el monte xd*/
     setfillstyle(SOLID_FILL,LIGHTBLUE);
     bar(0,0,640,480);
     setcolor(DARKGRAY);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
     bar(0,330,640,480);
 
-    
+    /*solecito*/
+    setcolor(WHITE);
+    circle(0,0,70);
+    setfillstyle(SOLID_FILL,YELLOW);
+    floodfill(0,0,WHITE);
+
 }
 
 void casita(int x){
     
+    /*dibujar casa*/
     setcolor(DARKGRAY);
     drawpoly(11,casa);
     setfillstyle(SOLID_FILL,LIGHTGRAY);
@@ -313,22 +307,32 @@ void casita(int x){
     drawpoly(11,puerta);
     setcolor(WHITE);
 
+    /*borrar rastro*/
     setfillstyle(SOLID_FILL,LIGHTBLUE);
     bar(90+x,20,140+x,40);
     bar(0+x,120,50+x,140);
     bar(190+x,80,240+x,100);
-
+    
+    /*dibujar nubes*/
     setfillstyle(SOLID_FILL,WHITE);
     bar(100+x,20,150+x,40);
     bar(10+x,120,60+x,140);
     bar(200+x,80,250+x,100);
 }
 
+/*funcion para dibujar a caperucita*/
 void cap(int c){
     int i;
+    
+    /*borrar rastro*/
+    setfillstyle(SOLID_FILL,LIGHTGREEN);
+    bar(10+c,337,109+c,472);
+
+    setcolor(RED);
 
     drawpoly(123, temp);
 
+    /*le suma a las posiciones de x lo q queremos que avance*/
     for(i = 0 ; i < 246 ; i += 2 ){
         temp[i] = temp[i] + c;
     }
