@@ -269,10 +269,7 @@ void main(){
         setfillstyle(SOLID_FILL,YELLOW);
         floodfill(0,0,WHITE);
 
-        setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(90+x,20,140+x,40);
-        bar(0+x,120,50+x,140);
-        bar(190+x,80,240+x,100);
+        
 
         casita(x);
 
@@ -315,6 +312,11 @@ void casita(int x){
         
     drawpoly(11,puerta);
     setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,LIGHTBLUE);
+    bar(90+x,20,140+x,40);
+    bar(0+x,120,50+x,140);
+    bar(190+x,80,240+x,100);
 
     setfillstyle(SOLID_FILL,WHITE);
     bar(100+x,20,150+x,40);
