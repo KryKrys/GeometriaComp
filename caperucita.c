@@ -243,8 +243,8 @@ canasta[166]={
 int temp[243];
 
 void fondo(void);
-void casita(void);
-void cap(int x);
+void casita(int x);
+void cap(int c);
 
 
 void main(){
@@ -261,19 +261,20 @@ void main(){
     fondo();
     while(kbhit()==0){
         
-        setfillstyle(SOLID_FILL,LIGHTBLUE);
-        bar(0,0,640,310);
-    
-        setfillstyle(SOLID_FILL,WHITE);
-        bar(100+x,20,150+x,40);
-        bar(10+x,120,60+x,140);
-        bar(200+x,80,250+x,100);
+        /*setfillstyle(SOLID_FILL,LIGHTBLUE);
+        bar(0,0,640,310);*/
 
         setcolor(WHITE);
         circle(0,0,70);
         setfillstyle(SOLID_FILL,YELLOW);
         floodfill(0,0,WHITE);
-        casita();
+
+        /*setfillstyle(SOLID_FILL,LIGHTBLUE);
+        bar(100+x,20,150+x,40);
+        bar(10+x,120,60+x,140);
+        bar(200+x,80,250+x,100);*/
+
+        casita(x);
 
         setfillstyle(SOLID_FILL,LIGHTGREEN);
         bar(10+c,337,109+c,472);
@@ -302,10 +303,11 @@ void fondo(){
     setcolor(DARKGRAY);
     setfillstyle(SOLID_FILL,LIGHTGREEN);
     bar(0,330,640,480);
+
     
 }
 
-void casita(){
+void casita(int x){
     
     setcolor(DARKGRAY);
     drawpoly(11,casa);
@@ -313,6 +315,11 @@ void casita(){
         
     drawpoly(11,puerta);
     setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,WHITE);
+    bar(100+x,20,150+x,40);
+    bar(10+x,120,60+x,140);
+    bar(200+x,80,250+x,100);
 }
 
 void cap(int c){
@@ -324,4 +331,4 @@ void cap(int c){
         temp[i] = temp[i] + c;
     }
 
-}
+}
