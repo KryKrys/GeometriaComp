@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <dos.h>
 
-weed[246]={
+weed[248]={
     84, 381,
     83, 385,
     87, 388,
@@ -37,6 +37,7 @@ weed[246]={
     88, 381,
     84, 381,
     86, 379,
+    85,381,
     86, 373,
     84, 369,
     83, 366,
@@ -255,7 +256,7 @@ void main(){
     initgraph(&driver, &modo, "");
 
     /*pasamos los valores de el arreglo a uno temporal para moverlo*/
-    for( i = 0 ; i < 246 ; i++){
+    for( i = 0 ; i < 248 ; i++){
         temp[i] = weed[i];
     }
 
@@ -330,13 +331,13 @@ void cap(int c){
 
     setcolor(LIGHTRED);
 
-    drawpoly(123, temp);
+    drawpoly(124, temp);
 
     setfillstyle(SOLID_FILL,RED);
-    floodfill(78+c,401,LIGHTRED);
+    floodfill(58+c,401,LIGHTRED);
 
     /*le suma a las posiciones de x lo q queremos que avance*/
-    for(i = 0 ; i < 246 ; i += 2 ){
+    for(i = 0 ; i < 248 ; i += 2 ){
         temp[i] = temp[i] + c;
     }
 
