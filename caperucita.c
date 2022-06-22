@@ -1,4 +1,3 @@
-
 #include <graphics.h>
 #include <conio.h>
 #include <dos.h>
@@ -264,8 +263,31 @@ void main(){
     while(kbhit()==0){/*ciclo hasta q se presione una tecla*/
 
         casita(x);
-       
+        
+        /*borrar rastro*/
+        setfillstyle(SOLID_FILL,LIGHTGREEN);
+        bar(10+c,337,109+c,472);
+
         cap(20);
+
+        setfillstyle(SOLID_FILL,RED);
+        floodfill(78+c,401,LIGHTRED);
+        floodfill(95+c,378,LIGHTRED);
+
+        setfillstyle(SOLID_FILL,WHITE);
+        floodfill(70+c,438,LIGHTRED);
+
+        setfillstyle(SOLID_FILL,BLACK);
+        floodfill(79+c,352,LIGHTRED);
+        floodfill(65+c,461,LIGHTRED);
+        floodfill(81+c,464,LIGHTRED);
+
+        setfillstyle(SOLID_FILL,BROWN);
+        floodfill(89+c,369,LIGHTRED);
+        floodfill(71+c,420,LIGHTRED);
+
+        setfillstyle(SOLID_FILL,BLACK);
+        bar(86+c,358,88+c,363);
 
         if(x>640){
             x=0;
@@ -324,21 +346,15 @@ void casita(int x){
 /*funcion para dibujar a caperucita*/
 void cap(int c){
     int i;
-    
-    /*borrar rastro*/
-    setfillstyle(SOLID_FILL,LIGHTGREEN);
-    bar(10+c,337,109+c,472);
 
     setcolor(LIGHTRED);
-
+    
     drawpoly(124, temp);
-
-    setfillstyle(SOLID_FILL,RED);
-    floodfill(58+c,401,LIGHTRED);
 
     /*le suma a las posiciones de x lo q queremos que avance*/
     for(i = 0 ; i < 248 ; i += 2 ){
         temp[i] = temp[i] + c;
     }
+    
 
 }
