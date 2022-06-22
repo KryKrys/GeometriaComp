@@ -328,9 +328,12 @@ void cap(int c){
     setfillstyle(SOLID_FILL,LIGHTGREEN);
     bar(10+c,337,109+c,472);
 
-    setcolor(RED);
+    setcolor(LIGHTRED);
 
     drawpoly(123, temp);
+
+    setfillstyle(SOLID_FILL,RED);
+    floodfill(78+c,401,LIGHTRED);
 
     /*le suma a las posiciones de x lo q queremos que avance*/
     for(i = 0 ; i < 246 ; i += 2 ){
