@@ -310,7 +310,7 @@ void main(){
     setfillstyle(1, RED);
     floodfill(113, 380, DARKGRAY);
     
-    setfillstyle(1,RED);
+    setfillstyle(1,WHITE);
     drawpoly(21,falda);
     floodfill(106,432,DARKGRAY);
     
@@ -331,17 +331,7 @@ void main(){
 
     drawpoly(6,boca);
     drawpoly(4,pelo);
-    
-    
-    
-    circle(182,330,5);
-
-    /*lobo*/
-    drawpoly(13,brazo1);
-    drawpoly(14,brazo2);
-    drawpoly(20,CABEZA);
-    drawpoly(9,OREJA);
-    drawpoly(9,BOCA);
+    /*fin caperucita*/
     
     
     
@@ -349,10 +339,25 @@ void main(){
 
     drawpoly(8,signo);
     drawpoly(28,bola);
-
+    circle(182,330,5);
+      
+     /*lobo*/
     drawpoly(7,DIENTES);
     drawpoly(13,GORRO);
     drawpoly(3,cuellito);
+   
+    drawpoly(13,brazo1);
+    drawpoly(14,brazo2);
+    drawpoly(20,CABEZA);
+    drawpoly(9,OREJA);
+    drawpoly(9,BOCA);
+
+    /*setfillstyle(1, LIGHTGRAY);
+    floodfill(457, 312, WHITE);
+
+    setfillstyle(1, BLUE);
+    floodfill(499, 386, WHITE);*/
+
 
     drawpoly(8,una1);
     drawpoly(8,una2);
