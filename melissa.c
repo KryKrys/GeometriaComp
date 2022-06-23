@@ -318,11 +318,9 @@ void main(){
     drawpoly(18,cara);
     floodfill(107, 346, DARKGRAY);
 
-    setfillstyle(1, BROWN);
+    
     drawpoly(11,pies);
-    floodfill(115, 460, DARKGRAY);
-    setfillstyle(1, BROWN);
-    floodfill(96, 459, DARKGRAY);
+    
     
     setfillstyle(1, BROWN);
     drawpoly(4,manos);
