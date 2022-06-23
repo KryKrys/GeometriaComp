@@ -2,15 +2,30 @@
 #include <conio.h>
 #include <dos.h>
 
-/*puerta2[]={
+puerta2[44]={
     578,188,
     575,189,
     573,190,
     571,193,
     570,195,
     569,197,
-
-}*/
+    568,199,
+    567,201,
+    566,204,
+    565,207,
+    564,209,
+    563,213,
+    563,405,
+    607,452,
+    608,231,
+    605,220,
+    602,214,
+    593,202,
+    589,196,
+    583,190,
+    579,188,
+    578,188
+};
 
 weed[248]={
     84, 381,
@@ -145,8 +160,8 @@ casa[22]={
     508,0,
     571,0,
     487,103,
-    640,80,
-    640,470,
+    639,80,
+    639,470,
     486,390,
     487,103,
     424,105
@@ -270,14 +285,13 @@ void main(){
     }
 
     fondo();
-    while(kbhit()==0){/*ciclo hasta q se presione una tecla*/
-
+    while(c<=530){/*ciclo hasta q se presione una tecla*/
         casita(x);
 
         /*pintar la casita*/
         setfillstyle(SOLID_FILL,YELLOW);
         floodfill(500,140,DARKGRAY);
-        
+            
         setfillstyle(SOLID_FILL,WHITE);
         floodfill(570,46,DARKGRAY);
 
@@ -322,6 +336,9 @@ void main(){
 
     }
 
+    drawpoly(21,puerta2);
+    getch();
+
     
 
 }
@@ -350,8 +367,10 @@ void casita(int x){
     setfillstyle(SOLID_FILL,LIGHTGRAY);
         
     drawpoly(11,puerta);
-    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,BROWN);
 
+
+    setcolor(WHITE);
     /*borrar rastro*/
     setfillstyle(SOLID_FILL,LIGHTBLUE);
     bar(90+x,20,140+x,40);
@@ -363,6 +382,7 @@ void casita(int x){
     bar(100+x,20,150+x,40);
     bar(10+x,120,60+x,140);
     bar(200+x,80,250+x,100);
+
 }
 
 /*funcion para dibujar a caperucita*/
