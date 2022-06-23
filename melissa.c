@@ -335,9 +335,16 @@ void main(){
     
     setcolor(WHITE);
 
+    setfillstyle(1, RED);
     drawpoly(8,signo);
+    floodfill(163, 304, WHITE);
+    setfillstyle(1, WHITE);
     drawpoly(28,bola);
+    floodfill(196, 302, WHITE);
+    
+    setfillstyle(1, RED);
     circle(182,330,5);
+    floodfill(182, 332, WHITE);
       
      /*lobo*/
     drawpoly(7,DIENTES);
