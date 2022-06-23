@@ -326,19 +326,24 @@ void main(){
 
     }
 
+    /*dibujar puerta abierta*/
     setcolor(DARKGRAY);
     drawpoly(21,puerta2);
 
+    /*pintar lo negro de la puerta2*/
     setfillstyle(SOLID_FILL,BLACK);
     floodfill(548,337,DARKGRAY);
+
     setfillstyle(SOLID_FILL,BROWN);
     floodfill(583,330,DARKGRAY);
 
+    /*cubrir a caperucita*/
     setfillstyle(SOLID_FILL,LIGHTGREEN);
     bar(10+c,337,109+c,472);
 
     delay(1000);
 
+    /*dibujar la puerta cerrandose*/
     setcolor(LIGHTGRAY);
     drawpoly(12,puerta);
     setfillstyle(SOLID_FILL,BROWN);
