@@ -2,6 +2,16 @@
 #include <conio.h>
 #include <dos.h>
 
+/*puerta2[]={
+    578,188,
+    575,189,
+    573,190,
+    571,193,
+    570,195,
+    569,197,
+
+}*/
+
 weed[248]={
     84, 381,
     83, 385,
@@ -263,13 +273,25 @@ void main(){
     while(kbhit()==0){/*ciclo hasta q se presione una tecla*/
 
         casita(x);
+
+        /*pintar la casita*/
+        setfillstyle(SOLID_FILL,YELLOW);
+        floodfill(500,140,DARKGRAY);
         
+        setfillstyle(SOLID_FILL,WHITE);
+        floodfill(570,46,DARKGRAY);
+
+        setfillstyle(SOLID_FILL,BROWN);
+        floodfill(500,50,DARKGRAY);
+        floodfill(468,36,DARKGRAY);
+
         /*borrar rastro*/
         setfillstyle(SOLID_FILL,LIGHTGREEN);
         bar(10+c,337,109+c,472);
 
         cap(20);
 
+        /*pintar a caperucita*/
         setfillstyle(SOLID_FILL,RED);
         floodfill(78+c,401,LIGHTRED);
         floodfill(95+c,378,LIGHTRED);
