@@ -301,15 +301,38 @@ void main(){
 
     /*caperucita*/
     drawpoly(83,canasta);
+
+    setcolor(DARKGRAY);
+    setfillstyle(1,RED);
     drawpoly(35,caperucita);
+    floodfill(128, 398, DARKGRAY);
+
+    setfillstyle(1, RED);
+    floodfill(113, 380, DARKGRAY);
+    
+    setfillstyle(1,RED);
     drawpoly(21,falda);
+    floodfill(106,432,DARKGRAY);
+    
+    setfillstyle(1, BROWN);
     drawpoly(18,cara);
+    floodfill(107, 346, DARKGRAY);
+
+    setfillstyle(1, BROWN);
     drawpoly(11,pies);
+    floodfill(115, 460, DARKGRAY);
+    setfillstyle(1, BROWN);
+    floodfill(96, 459, DARKGRAY);
+    
+    setfillstyle(1, BROWN);
     drawpoly(4,manos);
+    floodfill(84, 403, DARKGRAY);
+
+
     drawpoly(6,boca);
     drawpoly(4,pelo);
-    drawpoly(8,signo);
-    drawpoly(28,bola);
+    
+    
     
     circle(182,330,5);
 
@@ -319,6 +342,13 @@ void main(){
     drawpoly(20,CABEZA);
     drawpoly(9,OREJA);
     drawpoly(9,BOCA);
+    
+    
+    
+    setcolor(WHITE);
+
+    drawpoly(8,signo);
+    drawpoly(28,bola);
 
     drawpoly(7,DIENTES);
     drawpoly(13,GORRO);
