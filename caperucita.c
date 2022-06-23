@@ -166,7 +166,7 @@ casa[22]={
     487,103,
     424,105
 };
-puerta[22]={
+puerta[24]={
     524,410,
     524,213,
     534,198,
@@ -177,7 +177,8 @@ puerta[22]={
     593,200,
     603,215,
     609,231,
-    608,455
+    608,455,
+    524,410
 };
 canasta[166]={
     173,423,
@@ -285,19 +286,8 @@ void main(){
     }
 
     fondo();
-    while(c<=530){/*ciclo hasta q se presione una tecla*/
+    while(c<=370){/*ciclo hasta q se presione una tecla*/
         casita(x);
-
-        /*pintar la casita*/
-        setfillstyle(SOLID_FILL,YELLOW);
-        floodfill(500,140,DARKGRAY);
-            
-        setfillstyle(SOLID_FILL,WHITE);
-        floodfill(570,46,DARKGRAY);
-
-        setfillstyle(SOLID_FILL,BROWN);
-        floodfill(500,50,DARKGRAY);
-        floodfill(468,36,DARKGRAY);
 
         /*borrar rastro*/
         setfillstyle(SOLID_FILL,LIGHTGREEN);
@@ -336,7 +326,24 @@ void main(){
 
     }
 
+    setcolor(DARKGRAY);
     drawpoly(21,puerta2);
+
+    setfillstyle(SOLID_FILL,BLACK);
+    floodfill(548,337,DARKGRAY);
+    setfillstyle(SOLID_FILL,BROWN);
+    floodfill(583,330,DARKGRAY);
+
+    setfillstyle(SOLID_FILL,LIGHTGREEN);
+    bar(10+c,337,109+c,472);
+
+    delay(1000);
+
+    setcolor(LIGHTGRAY);
+    drawpoly(12,puerta);
+    setfillstyle(SOLID_FILL,BROWN);
+    floodfill(554,320,LIGHTGRAY);
+
     getch();
 
     
@@ -366,8 +373,19 @@ void casita(int x){
     drawpoly(11,casa);
     setfillstyle(SOLID_FILL,LIGHTGRAY);
         
-    drawpoly(11,puerta);
+    drawpoly(12,puerta);
+
+    /*pintar la casita*/
+    setfillstyle(SOLID_FILL,YELLOW);
+    floodfill(500,140,DARKGRAY);
+            
+    setfillstyle(SOLID_FILL,WHITE);
+    floodfill(570,46,DARKGRAY);
+
     setfillstyle(SOLID_FILL,BROWN);
+    floodfill(500,50,DARKGRAY);
+    floodfill(468,36,DARKGRAY);
+    floodfill(550,267,DARKGRAY);
 
 
     setcolor(WHITE);
