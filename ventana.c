@@ -2,7 +2,7 @@
 #include<graphics.h>
 
 
-int cortinaizq[36] = {
+cortinaizq[36] = {
 351, 86
 ,359, 87
 ,365, 84

@@ -297,20 +297,20 @@ void main(){
 
         /*pintar a caperucita*/
         setfillstyle(SOLID_FILL,RED);
-        floodfill(78+c,401,LIGHTRED);
-        floodfill(95+c,378,LIGHTRED);
+        floodfill(78+c,401,DARKGRAY);
+        floodfill(95+c,378,DARKGRAY);
 
         setfillstyle(SOLID_FILL,WHITE);
-        floodfill(70+c,438,LIGHTRED);
+        floodfill(70+c,438,DARKGRAY);
 
         setfillstyle(SOLID_FILL,BLACK);
-        floodfill(79+c,352,LIGHTRED);
-        floodfill(65+c,461,LIGHTRED);
-        floodfill(81+c,464,LIGHTRED);
+        floodfill(79+c,352,DARKGRAY);
+        floodfill(65+c,461,DARKGRAY);
+        floodfill(81+c,464,DARKGRAY);
 
         setfillstyle(SOLID_FILL,BROWN);
-        floodfill(89+c,369,LIGHTRED);
-        floodfill(71+c,420,LIGHTRED);
+        floodfill(89+c,369,DARKGRAY);
+        floodfill(71+c,420,DARKGRAY);
 
         setfillstyle(SOLID_FILL,BLACK);
         bar(86+c,358,88+c,363);
@@ -350,8 +350,6 @@ void main(){
     floodfill(554,320,LIGHTGRAY);
 
     getch();
-
-    
 
 }
 
@@ -412,7 +410,7 @@ void casita(int x){
 void cap(int c){
     int i;
 
-    setcolor(LIGHTRED);
+    setcolor(DARKGRAY);
     
     drawpoly(124, temp);
 
