@@ -544,6 +544,8 @@ void main(){
         floodfill(521,348,MAGENTA);
         floodfill(489,292,MAGENTA);
 
+    setcolor(DARKGRAY);
+    drawpoly(17,bb)
     drawpoly(4,z1);
     drawpoly(4,z2);
     drawpoly(4,z3);
