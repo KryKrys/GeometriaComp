@@ -35,9 +35,10 @@ void p7()
     rectangle(480, 288, 510, 310);
     floodfill(487, 290, 15);
  
-    
+    outtextxy(270, 116, "GANASTE MIERDA");
     outline();
     delay(1000);
+    
   
 }
  
