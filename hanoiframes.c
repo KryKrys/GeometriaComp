@@ -17,6 +17,154 @@ char tecla;
 
  
 /*Las funciones p# son para mostrar los diferentes frames, en cada una de ellas se dibujara un movimiento*/
+
+void l7(){
+    
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(264,345, 375, 373);
+    floodfill(282, 365, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(111, 346, 187, 373);
+    floodfill(142, 359, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(133, 319, 164, 342);
+    floodfill(140, 331, 15);
+    outtextxy(245, 116, "NO TE QUEDAN MOVIMIENTOS, PERDISTE");
+    outline();
+    delay(1000);
+
+}
+
+void l6(){
+
+    cleardevice();
+   setfillstyle(SOLID_FILL, RED);
+    rectangle(264,345, 375, 373);
+    floodfill(282, 365, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(111, 346, 187, 373);
+    floodfill(142, 359, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(305, 321, 338, 340);
+    floodfill(313, 330, 15);
+    outline();
+    delay(1000);
+
+}
+
+void l5 (){
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(264,345, 375, 373);
+    floodfill(282, 365, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(458, 347, 533, 373);
+    floodfill(474, 363, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(305, 321, 338, 340);
+    floodfill(313, 330, 15);
+    outline();
+    delay(1000);
+
+}
+
+void l4(){
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(264,345, 375, 373);
+    floodfill(282, 365, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(458, 347, 533, 373);
+    floodfill(474, 363, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(478, 320, 511, 342);
+    floodfill(489, 334, 15);
+    outline();
+    delay(1000);
+
+}
+
+
+void l3(){
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(94, 346, 204, 373);
+    floodfill(98, 349, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(458, 347, 533, 373);
+    floodfill(474, 363, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(478, 320, 511, 342);
+    floodfill(489, 334, 15);
+    outline();
+    delay(1000);
+
+
+}
+
+
+void l2(){
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(94, 346, 204, 373);
+    floodfill(98, 349, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(458, 347, 533, 373);
+    floodfill(474, 363, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(304, 353, 336, 373);
+    floodfill(317, 365, 15);
+    outline();
+    delay(1000);
+
+}
+
+void l1(){
+    cleardevice();
+    setfillstyle(SOLID_FILL, RED);
+    rectangle(94, 346, 204, 373);
+    floodfill(98, 349, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, BLUE);
+    rectangle(111, 314, 186, 342);
+    floodfill(113, 320, 15);
+ 
+   
+    setfillstyle(SOLID_FILL, GREEN);
+    rectangle(304, 353, 336, 373);
+    floodfill(317, 365, 15);
+    outline();
+    delay(1000);
+
+}
+
+
 void p7()
 {
      cleardevice();
@@ -35,7 +183,7 @@ void p7()
     rectangle(480, 288, 510, 310);
     floodfill(487, 290, 15);
  
-    outtextxy(270, 116, "GANASTE MIERDA");
+    outtextxy(270, 116, "GANASTE");
     outline();
     delay(1000);
     
@@ -226,14 +374,8 @@ int outline()
 {
     
     line(28, 376, 602, 376);
- 
-    
     line(149, 191, 149, 376);
- 
-    
     line(321, 186, 321, 376);
- 
-
     line(496, 185, 496, 376);
  
     
@@ -260,31 +402,31 @@ void main()
 			switch(tecla){
         
     case arriba:
-        p1();
+        l1();
         break;
 
     case abajo:
-        p2();
+        l2();
         break;
  
     case izquierda:
-        p3();
+        l3();
         break;
  
     case derecha:
-        p4();
+        l4();
         break;
     
     case punto:
-        p5();
+        l5();
         break;
 
     case coma:
-        p6();
+        l6();
         break;
  
     case comi:
-        p7();
+        l7();
         break;
     
     case ESC:
@@ -295,8 +437,8 @@ void main()
     }while(tecla!=ESC);
  
     
-    getch();
+    
  
    
     closegraph();
-}
+}
