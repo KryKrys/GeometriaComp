@@ -19,6 +19,21 @@ char tecla;
 char sel;
 
 void outline(void);
+void start (void);
+void p1(void);
+void p2(void);
+void p3(void);
+void p4(void);
+void p5(void);
+void p6(void);
+void p7(void);
+void l1(void);
+void l2(void);
+void l3(void);
+void l4(void);
+void l5(void);
+void l6(void);
+void l7(void);
 
 
  
@@ -270,9 +285,7 @@ void p4()
     delay(1000);
 }
    
-
  
-
 void p3()
 {
     cleardevice();
@@ -484,51 +497,6 @@ void main()
             }while(tecla!=ESC);
         break;
     }
-
-
-    /*perder*/
- /* do{
-    
-    if(kbhit()){
-	    tecla = getch();
-		switch(tecla){
-        
-    case arriba:
-        l1();
-        break;
-
-    case abajo:
-        l2();
-        break;
- 
-    case izquierda:
-        l3();
-        break;
- 
-    case derecha:
-        l4();
-        break;
-    
-    case punto:
-        l5();
-        break;
-
-    case coma:
-        l6();
-        break;
- 
-    case comi:
-        l7();
-        break;
-    
-    }
-        }
-            
-
-    }while(tecla!=ESC);*/
- 
-    
-    
  
    
     closegraph();
