@@ -18,6 +18,7 @@
 char tecla;
 char sel;
 
+void outline(void);
 
 
  
@@ -375,7 +376,7 @@ void start()
 }
  
 
-int outline()
+void outline()
 {
     
     line(28, 376, 602, 376);
@@ -389,7 +390,6 @@ int outline()
     outtextxy(313, 390, "(2)");
     outtextxy(488, 390, "(3)");
 
-    return 0;
 }
 
 void main()
@@ -399,9 +399,95 @@ void main()
     cleardevice();
 
     start();
-    
-  
-  do{
+
+    do{
+        sel = getch();
+    }while(sel!=k && sel!=l);
+
+    switch(sel){
+        case k: 
+            do{
+            
+                tecla = getch();
+                switch(tecla){
+                    
+                    case arriba:
+                        p1();
+                    break;
+
+                    case abajo:
+                        p2();
+                    break;
+                    
+                    case izquierda:
+                        p3();
+                    break;
+                    
+                    case derecha:
+                        p4();
+                    break;
+                        
+                    case punto:
+                        p5();
+                    break;
+
+                    case coma:
+                        p6();
+                    break;
+                    
+                    case comi:
+                        p7();
+                    break;
+                    
+                }
+                        
+            }while(tecla!=ESC);
+
+        break;
+
+        case l:
+            do{
+
+                tecla = getch();
+                switch(tecla){
+                    
+                    case arriba:
+                        l1();
+                    break;
+
+                    case abajo:
+                        l2();
+                    break;
+                    
+                    case izquierda:
+                        l3();
+                    break;
+                    
+                    case derecha:
+                        l4();
+                    break;
+                        
+                    case punto:
+                        l5();
+                    break;
+
+                    case coma:
+                        l6();
+                    break;
+                    
+                    case comi:
+                        l7();
+                    break;
+                    
+                }
+                        
+            }while(tecla!=ESC);
+        break;
+    }
+
+
+    /*perder*/
+ /* do{
     
     if(kbhit()){
 	    tecla = getch();
@@ -439,7 +525,7 @@ void main()
         }
             
 
-    }while(tecla!=ESC);
+    }while(tecla!=ESC);*/
  
     
     
