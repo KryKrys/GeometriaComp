@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <button.h>
 
-void princip(void);
+void menuhanoi(void);
 
 void main(){
 
@@ -14,7 +14,7 @@ void main(){
 
     cleardevice();
 
-    princip();
+    menuhanoi();
 
 
 
@@ -22,7 +22,7 @@ void main(){
 
 }
 
-void princip(){
+void menuhanoi(){
     button jugar, inst, salir;
 
     setfillstyle(SOLID_FILL,YELLOW);
