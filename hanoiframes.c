@@ -12,8 +12,13 @@
 #define coma 44
 #define comi 39
 #define ESC 27
+#define k 107
+#define l 108
 
 char tecla;
+char sel;
+
+
 
  
 /*Las funciones p# son para mostrar los diferentes frames, en cada una de ellas se dibujara un movimiento*/
@@ -34,7 +39,7 @@ void l7(){
     setfillstyle(SOLID_FILL, GREEN);
     rectangle(133, 319, 164, 342);
     floodfill(140, 331, 15);
-    outtextxy(245, 116, "NO TE QUEDAN MOVIMIENTOS, PERDISTE");
+    outtextxy(165, 116, "NO TE QUEDAN MOVIMIENTOS, PERDISTE");
     outline();
     delay(1000);
 
@@ -397,9 +402,10 @@ void main()
     
   
   do{
+    
     if(kbhit()){
-			tecla = getch();
-			switch(tecla){
+	    tecla = getch();
+		switch(tecla){
         
     case arriba:
         l1();
@@ -431,7 +437,8 @@ void main()
     
     }
         }
-    
+            
+
     }while(tecla!=ESC);
  
     
