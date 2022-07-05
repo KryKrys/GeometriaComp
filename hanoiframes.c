@@ -429,8 +429,6 @@ void main()
         l7();
         break;
     
-    case ESC:
-        break;
     }
         }
     
