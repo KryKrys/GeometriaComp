@@ -318,8 +318,8 @@
     BOCA[18]= {
         436,290,443,289,457,301,470,311,473,317,473,306,458,296,447,289,437,289};
 
-    DIENTES[14]= { 
-        452,293,453,298,458,297,459,303,464,301,466,308,471,305};
+    DIENTES[16]= { 
+        452,293,453,298,458,297,459,303,464,301,466,308,471,305,452,293};
 
     GORRO[70]={
         468,292,
@@ -487,7 +487,19 @@
         640,408,
         338,408,
         338,425,
-        639,425
+        639,425};
+
+    cuello[20]={
+        451,331,
+        452,330,
+        453,330,
+        454,329,
+        456,327,
+        460,327,
+        461,326,
+        465,326,
+        466,325,
+        476,325
     };
 
 void main(){
@@ -495,7 +507,7 @@ void main(){
 	int modo, driver = DETECT;
 
     initgraph(&driver, &modo, "");
-
+    
     /*fondo*/
     setfillstyle(SOLID_FILL,CYAN);
     floodfill(427,108,DARKGRAY);
@@ -546,14 +558,18 @@ void main(){
 
     setcolor(DARKGRAY);
     drawpoly(17,bb);
+    setfillstyle(SOLID_FILL,WHITE);
+    fillpoly(17,bb);
     drawpoly(4,z1);
     drawpoly(4,z2);
     drawpoly(4,z3);
 
     /*lobo*/
-        setcolor(WHITE);
-        drawpoly(7,DIENTES);
         setcolor(DARKGRAY);
+        drawpoly(8,DIENTES);
+        setfillstyle(SOLID_FILL,WHITE);
+        fillpoly(8,DIENTES);
+
         drawpoly(3,cuellito);
     
         drawpoly(13,brazo1);
@@ -561,10 +577,13 @@ void main(){
         drawpoly(20,CABEZA);
         drawpoly(9,OREJA);
         drawpoly(9,BOCA);
+        drawpoly(10,cuello);
 
     drawpoly(8,una1);
     drawpoly(8,una2);
     drawpoly(8,moco);
+    setfillstyle(SOLID_FILL,WHITE);
+    fillpoly(8,moco);
 
     /*ventana*/
 	rectangle(218,93,350,218);
@@ -586,27 +605,66 @@ void main(){
     floodfill(163, 304, DARKGRAY);
     floodfill(182, 332, DARKGRAY);
 
+    setfillstyle(SOLID_FILL,YELLOW);
+    /*piso*/
+    floodfill(285,460,DARKGRAY);
+
     setfillstyle(SOLID_FILL,WHITE);
     floodfill(106,432,DARKGRAY);
     floodfill(196, 302, DARKGRAY);
-    floodfill(285,460,DARKGRAY);
+    /*unas*/
+    floodfill(428,345,DARKGRAY);
+    floodfill(434,344,DARKGRAY);
+    floodfill(441,345,DARKGRAY);
+
+    floodfill(489,345,DARKGRAY);
+    floodfill(494,346,DARKGRAY);
+    floodfill(502,345,DARKGRAY);
 
     setfillstyle(SOLID_FILL, BROWN);
 	floodfill(121,366,DARKGRAY);
     floodfill(84, 403, DARKGRAY);
+    floodfill(130,406,DARKGRAY);
     fillpoly(24,puerta3);
 
     floodfill(566,422,DARKGRAY);
     floodfill(538,453,DARKGRAY);
 
+    setfillstyle(SOLID_FILL,LIGHTGRAY);
+    floodfill(240,90,DARKGRAY);
+    /*lobo*/
+    floodfill(460,324,DARKGRAY);
+    floodfill(436,336,DARKGRAY);
+    floodfill(492,332,DARKGRAY);
+    floodfill(491,309,DARKGRAY);
+    /*oreja*/
+    floodfill(497,305,DARKGRAY);
+
     setfillstyle(SOLID_FILL,BLACK);
     floodfill(107, 346, DARKGRAY);
     fillpoly(6,boca);
     fillpoly(19,pies);
+    floodfill(471,309,DARKGRAY);
+    floodfill(447,291,DARKGRAY);
+    /*ojos*/
+    bar(118,358,120,365);
 
-    setfillstyle(SOLID_FILL,LIGHTGRAY);
-    floodfill(240,90,DARKGRAY);
+    setcolor(BLACK);
+    line(473,297,481,303);
+    setcolor(WHITE);
+    circle(445,283,3);
+    floodfill(445,283,WHITE);
 
+    setfillstyle(XHATCH_FILL,RED);
+    floodfill(203,437,DARKGRAY);
+
+    setfillstyle(SOLID_FILL,LIGHTRED);
+    /*canasta*/
+    floodfill(180,430,DARKGRAY);
+    floodfill(172,442,DARKGRAY);
+
+    
+    
     getch();
     
 }
